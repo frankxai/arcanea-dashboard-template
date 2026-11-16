@@ -41,3 +41,5 @@ Official requirements checked 2026-11-16: [Vercel](https://vercel.com/templates/
 ## Executed regression reference
 
 `release/visual-baseline.json` pins decoded RGBA pixel hashes, dimensions, viewports and source revision from the inspected browser artifact. The Playwright release checks now compare against that reference on every run and attach current images on mismatch. It detects any pixel change without storing marketing masters in Git. These are technical regression baselines, separate from founder publication approval. Optional `toHaveScreenshot` image goldens remain available for a tolerance-based workflow.
+
+After browser checks, channel exports copy the three captured PNGs and bind their dimensions, bytes, source revision and SHA-256. Stale or modified captures block export. Without a browser capture, the packet explicitly records `missing_browser_capture` and is incomplete. Protected staging references remain review URLs; their exact serving commit is recorded separately in PR evidence.

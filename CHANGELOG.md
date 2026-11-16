@@ -8,3 +8,5 @@
 - Migrate dashboard animation imports to Motion for React; add reduced-motion behavior, landmarks, sample labels, precise metrics and textual chart data.
 
 No product publication, pricing change or marketplace submission.
+
+- Bind real commercial screenshots to each channel packet; reject stale revisions, modified PNGs and mismatched dimensions.

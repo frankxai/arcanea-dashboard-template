@@ -4,8 +4,10 @@
   "promise": "Six reusable analytics widgets with explicit sample data and no required backend.",
   "boundary": "Deterministic sample data only; no live analytics, authentication or database.",
   "demo": {
-    "state": "preview_required",
-    "url": null
+    "state": "protected_staging_review",
+    "url": "https://arcanea-dashboard-template-review-bxi835yaz.vercel.app/",
+    "production": "approval_required",
+    "verification": "Serving commit is recorded separately in the PR evidence; this reference is not a self-verification receipt."
   },
   "tokenSources": [
     {
