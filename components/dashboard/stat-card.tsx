@@ -11,16 +11,17 @@ export interface StatCardProps {
   prefix?: string;
   suffix?: string;
   delta: number;
+  decimals?: number;
   accent: string;
 }
 
-export function StatCard({ label, value, prefix, suffix, delta, accent }: StatCardProps) {
+export function StatCard({ label, value, prefix, suffix, delta, accent, decimals = 0 }: StatCardProps) {
   const positive = delta >= 0;
 
   return (
     <LiquidGlass className="p-6">
       <div className="flex items-start justify-between mb-3">
-        <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/50">
+        <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/70">
           {label}
         </span>
         <span
@@ -40,7 +41,7 @@ export function StatCard({ label, value, prefix, suffix, delta, accent }: StatCa
 
       <div className="flex items-baseline gap-1">
         {prefix && <span className="text-xl text-white/60">{prefix}</span>}
-        <NumberTicker value={value} className="text-3xl font-semibold text-white" />
+        <NumberTicker decimals={decimals} value={value} className="text-3xl font-semibold text-white" />
         {suffix && <span className="text-xl text-white/60">{suffix}</span>}
       </div>
 

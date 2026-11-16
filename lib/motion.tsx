@@ -1,6 +1,6 @@
 'use client';
 
-import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { LazyMotion, domAnimation, m, MotionConfig } from 'motion/react';
 import { ReactNode } from 'react';
 
 /**
@@ -10,9 +10,9 @@ import { ReactNode } from 'react';
  */
 export function MotionProvider({ children }: { children: ReactNode }) {
   return (
-    <LazyMotion features={domAnimation} strict>
+    <MotionConfig reducedMotion="user"><LazyMotion features={domAnimation}>
       {children}
-    </LazyMotion>
+    </LazyMotion></MotionConfig>
   );
 }
 

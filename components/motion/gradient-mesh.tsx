@@ -1,6 +1,6 @@
 'use client';
 
-import { LazyMotion, domAnimation, m, useMotionValue, useSpring } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useMotionValue, useSpring, useReducedMotion } from 'motion/react';
 import { useEffect, useRef } from 'react';
 import { SPRING } from '@/lib/motion';
 
@@ -20,6 +20,7 @@ export function GradientMesh({
   colors = ['#00bcd4', '#a78bfa', '#f472b6'],
   intensity = 0.08,
 }: Props) {
+  const reduced = useReducedMotion();
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
   const springX = useSpring(mouseX, SPRING.slow);
@@ -27,6 +28,7 @@ export function GradientMesh({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (reduced) return;
     function handleMove(e: MouseEvent) {
       if (!ref.current) return;
       const rect = ref.current.getBoundingClientRect();
@@ -35,7 +37,7 @@ export function GradientMesh({
     }
     window.addEventListener('mousemove', handleMove);
     return () => window.removeEventListener('mousemove', handleMove);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, reduced]);
 
   const [c1, c2, c3] = colors;
   const hex = (c: string, a: number) => {

@@ -1,6 +1,6 @@
 'use client';
 
-import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useReducedMotion } from 'motion/react';
 import { EASE } from '@/lib/motion';
 
 interface Props {
@@ -16,6 +16,7 @@ interface Props {
  * Each character animates in with a slight upward motion.
  */
 export function SplitText({ text, className = '', delay = 0, stagger = 0.03, as = 'span' }: Props) {
+  const reduced = useReducedMotion();
   const chars = text.split('');
   const Tag: 'h1' | 'h2' | 'h3' | 'p' | 'span' = as;
 
@@ -26,12 +27,12 @@ export function SplitText({ text, className = '', delay = 0, stagger = 0.03, as 
           <m.span
             key={i}
             aria-hidden="true"
-            initial={{ opacity: 0, y: '0.4em', filter: 'blur(8px)' }}
+            initial={false}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{
-              duration: 0.5,
+              duration: reduced ? 0 : 0.5,
               ease: EASE.smooth,
-              delay: delay + i * stagger,
+              delay: reduced ? 0 : delay + i * stagger,
             }}
             style={{ display: 'inline-block', whiteSpace: char === ' ' ? 'pre' : 'normal' }}
           >

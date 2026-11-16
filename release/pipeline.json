@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Arcanea Dashboard Template",
+  "promise": "Six reusable analytics widgets with explicit sample data and no required backend.",
+  "boundary": "Deterministic sample data only; no live analytics, authentication or database.",
+  "demo": {
+    "state": "preview_required",
+    "url": null
+  },
+  "tokenSources": [
+    {
+      "path": "app/globals.css",
+      "selector": ":root"
+    }
+  ],
+  "blockers": [
+    "Current-commit browser/visual approval",
+    "Font and icon notices review",
+    "Owner publication approval"
+  ],
+  "captureRoutes": [
+    "/"
+  ],
+  "screenshotPolicy": {
+    "data": "fictional samples only",
+    "publication": "review_required",
+    "cover": [
+      1280,
+      720
+    ],
+    "thumbnail": [
+      600,
+      600
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  }
+}

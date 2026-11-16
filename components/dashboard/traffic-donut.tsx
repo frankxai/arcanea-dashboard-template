@@ -7,15 +7,16 @@ import { TRAFFIC_SOURCES } from "@/lib/mock-data";
 export function TrafficDonut() {
   return (
     <LiquidGlass className="p-6">
-      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/50 mb-4">
+      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/70 mb-4">
         Traffic sources
       </p>
 
-      <div className="flex items-center gap-6">
-        <div className="relative h-[140px] w-[140px] shrink-0">
+      <div className="flex flex-wrap items-center gap-6">
+        <div aria-hidden="true" className="relative h-[140px] w-[140px] shrink-0">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
+                isAnimationActive={false}
                 data={TRAFFIC_SOURCES}
                 dataKey="value"
                 innerRadius={48}
@@ -31,7 +32,7 @@ export function TrafficDonut() {
           </ResponsiveContainer>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <span className="text-2xl font-semibold text-white">100%</span>
-            <span className="text-[10px] font-mono text-white/40">total</span>
+            <span className="text-[10px] font-mono text-white/70">total</span>
           </div>
         </div>
 

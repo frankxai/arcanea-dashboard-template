@@ -4,8 +4,8 @@
 export const STATS = [
   { label: "Revenue", value: 284_521, prefix: "$", delta: 12.4, accent: "#00bcd4" },
   { label: "Active users", value: 18_492, delta: 4.8, accent: "#a78bfa" },
-  { label: "Conversion", value: 3.42, suffix: "%", delta: -0.3, accent: "#34d399" },
-  { label: "Avg session", value: 4.6, suffix: "m", delta: 8.1, accent: "#fbbf24" },
+  { label: "Conversion", value: 3.42, decimals: 2, suffix: "%", delta: -0.3, accent: "#34d399" },
+  { label: "Avg session", value: 4.6, decimals: 1, suffix: "m", delta: 8.1, accent: "#fbbf24" },
 ];
 
 export const REVENUE_SERIES = [

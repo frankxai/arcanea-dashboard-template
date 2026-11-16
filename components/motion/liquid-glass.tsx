@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { useReducedMotion } from 'motion/react';
 
 interface LiquidGlassProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -62,6 +63,7 @@ const LiquidGlass = React.forwardRef<HTMLDivElement, LiquidGlassProps>(
     },
     ref,
   ) => {
+    const reduced = useReducedMotion();
     const innerRef = React.useRef<HTMLDivElement>(null);
     const [pos, setPos] = React.useState({ x: -9999, y: -9999 });
     const [hovering, setHovering] = React.useState(false);
@@ -78,6 +80,7 @@ const LiquidGlass = React.forwardRef<HTMLDivElement, LiquidGlassProps>(
     }, [tint]);
 
     function handleMove(e: React.MouseEvent<HTMLDivElement>) {
+      if (reduced) return;
       const el = innerRef.current;
       if (!el) return;
       const rect = el.getBoundingClientRect();
@@ -106,7 +109,7 @@ const LiquidGlass = React.forwardRef<HTMLDivElement, LiquidGlassProps>(
       <div
         ref={ref}
         className={`relative ${className}`}
-        style={{ perspective: tilt ? '1000px' : undefined, ...style }}
+        style={{ perspective: tilt && !reduced ? '1000px' : undefined, ...style }}
         {...props}
       >
         {/* Layer 0: Outer glow ring (Ein UI pattern) */}

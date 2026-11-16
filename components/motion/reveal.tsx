@@ -1,6 +1,6 @@
 'use client';
 
-import { LazyMotion, domAnimation, m, type Variants } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useReducedMotion, type Variants } from 'motion/react';
 import { EASE, VIEWPORT } from '@/lib/motion';
 
 interface Props {
@@ -17,6 +17,7 @@ interface Props {
  * Fires once when entering viewport with -80px margin.
  */
 export function Reveal({ children, className = '', delay = 0, y = 24, blur = true, as = 'div' }: Props) {
+  const reduced = useReducedMotion();
   const variants: Variants = {
     hidden: {
       opacity: 0,
@@ -37,7 +38,8 @@ export function Reveal({ children, className = '', delay = 0, y = 24, blur = tru
     <LazyMotion features={domAnimation}>
       <Component
         className={className}
-        initial="hidden"
+        initial={reduced ? false : "hidden"}
+        animate={reduced ? "visible" : undefined}
         whileInView="visible"
         viewport={VIEWPORT}
         variants={variants}
@@ -57,6 +59,7 @@ export function StaggerReveal({ children, className = '', stagger = 0.08, delay 
   stagger?: number;
   delay?: number;
 }) {
+  const reduced = useReducedMotion();
   const variants: Variants = {
     hidden: {},
     visible: {
@@ -71,7 +74,8 @@ export function StaggerReveal({ children, className = '', stagger = 0.08, delay 
     <LazyMotion features={domAnimation}>
       <m.div
         className={className}
-        initial="hidden"
+        initial={reduced ? false : "hidden"}
+        animate={reduced ? "visible" : undefined}
         whileInView="visible"
         viewport={VIEWPORT}
         variants={variants}
