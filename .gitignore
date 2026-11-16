@@ -5,3 +5,8 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .vercel/
+
+dist/
+release-evidence/
+playwright-report/
+test-results/

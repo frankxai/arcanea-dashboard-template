@@ -22,7 +22,7 @@ Plus 6 motion primitives in `components/motion/`:
 
 - **Next.js 16** (App Router, Turbopack, React 19)
 - **Recharts** for charts (no D3 directly)
-- **Framer Motion 11** for primitives
+- **Motion for React** for primitives
 - **Tailwind CSS v3** + custom design tokens
 - **TypeScript** strict
 - **Zero env vars required** — runs with mock data out of the box
@@ -62,8 +62,12 @@ Open http://localhost:3000.
 
 ## License
 
-MIT — use commercially, modify freely, no attribution required.
+MIT — use commercially, modify freely, retain the copyright and permission notice in distributed source or substantial copies.
 
 ---
 
 Built by [Arcanea](https://arcanea.ai) · [GitHub](https://github.com/frankxai) · [More templates](https://arcanea.ai/templates)
+
+## Release review
+
+See [release evidence and channels](docs/release/README.md), [offline setup guide](docs/release/setup.html), [component contracts](docs/release/COMPONENTS.md), [rights metadata](release/rights.json) and [changelog](CHANGELOG.md). Packaging is a review candidate; publication requires separate approval.

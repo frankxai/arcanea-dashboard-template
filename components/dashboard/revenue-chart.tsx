@@ -11,7 +11,7 @@ export function RevenueChart() {
     <LiquidGlass className="p-6">
       <div className="flex items-start justify-between mb-6">
         <div>
-          <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/50">
+          <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/70">
             Revenue · 7d
           </p>
           <p className="text-2xl font-semibold text-white mt-1">
@@ -20,11 +20,11 @@ export function RevenueChart() {
         </div>
         <div className="flex items-center gap-1.5">
           <div className="size-2 rounded-full bg-[#00bcd4] shadow-[0_0_8px_#00bcd4]" />
-          <span className="text-[11px] font-mono text-white/50">live</span>
+          <span className="text-[11px] font-mono text-white/70">sample</span>
         </div>
       </div>
 
-      <div className="h-[180px]">
+      <div className="h-[180px]" aria-hidden="true">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={REVENUE_SERIES} margin={{ top: 4, right: 4, left: -24, bottom: 0 }}>
             <defs>
@@ -56,6 +56,7 @@ export function RevenueChart() {
               formatter={(v: number) => [`$${v.toLocaleString()}`, "Revenue"]}
             />
             <Area
+              isAnimationActive={false}
               type="monotone"
               dataKey="value"
               stroke="#00bcd4"
@@ -65,6 +66,7 @@ export function RevenueChart() {
           </AreaChart>
         </ResponsiveContainer>
       </div>
+      <table className="sr-only"><caption>Sample revenue by day</caption><thead><tr><th scope="col">Day</th><th scope="col">Revenue in USD</th></tr></thead><tbody>{REVENUE_SERIES.map(row => <tr key={row.day}><th scope="row">{row.day}</th><td>{row.value}</td></tr>)}</tbody></table>
     </LiquidGlass>
   );
 }

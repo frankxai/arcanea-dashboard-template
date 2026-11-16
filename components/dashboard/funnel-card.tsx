@@ -8,7 +8,7 @@ export function FunnelCard() {
 
   return (
     <LiquidGlass className="p-6">
-      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/50 mb-4">
+      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/70 mb-4">
         Conversion funnel · 30d
       </p>
 
@@ -48,7 +48,7 @@ export function FunnelCard() {
       </div>
 
       <div className="mt-4 pt-3 border-t border-white/[0.05] flex items-center justify-between">
-        <span className="text-[11px] font-mono text-white/40">Overall</span>
+        <span className="text-[11px] font-mono text-white/70">Overall</span>
         <span className="text-sm font-mono text-[#00bcd4]">
           {((FUNNEL_STEPS.at(-1)!.count / top) * 100).toFixed(2)}%
         </span>

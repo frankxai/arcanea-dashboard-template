@@ -15,3 +15,10 @@
     color: #fff;
   }
 }
+
+:root { color-scheme: dark; --surface: #09090b; --foreground: #e6eefc; --muted: #a6b4c8; --primary: #00bcd4; --violet: #a78bfa; --emerald: #34d399; --gold: #fbbf24; --rose: #f472b6; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.skip-link { position: absolute; z-index: 50; left: 1rem; top: -5rem; padding: .75rem 1rem; background: var(--surface); color: var(--foreground); }
+.skip-link:focus { top: 1rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+@media (prefers-reduced-transparency: reduce) { [data-glass-surface] { background: #131a24 !important; backdrop-filter: none !important; } }

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0.0",
+  "purpose": "Technical regression reference, separate from founder publication approval",
+  "sourceRun": "https://github.com/frankxai/arcanea-dashboard-template/actions/runs/43779068576",
+  "review": "Rendered desktop and phone images inspected; no publication approval",
+  "records": [
+    {
+      "route": "/",
+      "revision": "c95d35be2167d2fe1810ef3d77a0c7d867d754f4",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "dpr": 1,
+      "sha256": "d9567edfac63359b779730ef20093da607562e2e305bab0e53a0ceb6d0f244a9",
+      "bytes": 643611,
+      "mime": "image/png",
+      "fonts": [
+        {
+          "tag": "BODY",
+          "fontFamily": "Inter, \"Inter Fallback\", Inter, system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        },
+        {
+          "tag": "H1",
+          "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\", \"Space Grotesk\", sans-serif",
+          "fontSize": "36px",
+          "fontWeight": "600"
+        }
+      ],
+      "a11y": "passed",
+      "visualRegression": "capture-only-no-approved-baseline",
+      "pixelSha256": "37c773f106a6db21cf7c4669c5809123f670bfd11968099de7a424ba611f5e4c",
+      "imageWidth": 320,
+      "imageHeight": 2722
+    },
+    {
+      "route": "/",
+      "revision": "c95d35be2167d2fe1810ef3d77a0c7d867d754f4",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "dpr": 1,
+      "sha256": "255a76dc1d915e522eb32f571a0e68ebe645c359b6f328de3cbe979120c1bc7e",
+      "bytes": 1078015,
+      "mime": "image/png",
+      "fonts": [
+        {
+          "tag": "BODY",
+          "fontFamily": "Inter, \"Inter Fallback\", Inter, system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        },
+        {
+          "tag": "H1",
+          "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\", \"Space Grotesk\", sans-serif",
+          "fontSize": "36px",
+          "fontWeight": "600"
+        }
+      ],
+      "a11y": "passed",
+      "visualRegression": "capture-only-no-approved-baseline",
+      "pixelSha256": "9a182da1b88693e8144b23f5f9252b577f3c95e46ea5efa49b3c13a6dc606f7c",
+      "imageWidth": 1280,
+      "imageHeight": 1160
+    },
+    {
+      "route": "/",
+      "revision": "c95d35be2167d2fe1810ef3d77a0c7d867d754f4",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dpr": 1,
+      "sha256": "3fbdb673c8c80825bc805b4976413b8db9ea35ca2b0bfdf366ecd9d4fbdd26be",
+      "bytes": 723192,
+      "mime": "image/png",
+      "fonts": [
+        {
+          "tag": "BODY",
+          "fontFamily": "Inter, \"Inter Fallback\", Inter, system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        },
+        {
+          "tag": "H1",
+          "fontFamily": "\"Space Grotesk\", \"Space Grotesk Fallback\", \"Space Grotesk\", sans-serif",
+          "fontSize": "36px",
+          "fontWeight": "600"
+        }
+      ],
+      "a11y": "passed",
+      "visualRegression": "capture-only-no-approved-baseline",
+      "pixelSha256": "07d760a3d30b83cca09a2f2c4478c9fe9cda9cd92bce936dd17eb57de1174d1a",
+      "imageWidth": 390,
+      "imageHeight": 2531
+    }
+  ]
+}

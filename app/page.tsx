@@ -18,14 +18,16 @@ export default function Dashboard() {
         <GradientMesh colors={["#00bcd4", "#a78bfa", "#f472b6"]} intensity={0.05} />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 py-10">
+      <a className="skip-link" href="#main">Skip to content</a>
+      <main id="main" className="max-w-[1400px] mx-auto px-4 sm:px-6 py-10">
         {/* Header */}
-        <header className="flex items-end justify-between mb-10">
+        <header className="flex flex-wrap gap-6 items-end justify-between mb-10">
           <div>
-            <p className="text-[11px] font-mono uppercase tracking-[0.3em] text-white/40 mb-2">
+            <p className="text-[11px] font-mono uppercase tracking-[0.3em] text-white/70 mb-2">
               Arcanea · Dashboard Template
             </p>
             <SplitText
+              as="h1"
               text="Cosmic analytics."
               className="text-4xl font-display font-semibold tracking-tight text-white"
             />
@@ -33,7 +35,7 @@ export default function Dashboard() {
           <Reveal y={8} blur>
             <a
               href="https://github.com/frankxai/arcanea-dashboard-template"
-              className="font-mono text-[11px] tracking-wider text-white/50 hover:text-[#00bcd4] transition-colors"
+              className="min-h-11 inline-flex items-center font-mono text-[11px] tracking-wider text-white/70 hover:text-[#00bcd4] transition-colors"
             >
               github →
             </a>
@@ -75,11 +77,11 @@ export default function Dashboard() {
         </div>
 
         {/* Footer */}
-        <footer className="mt-12 pt-6 border-t border-white/[0.05] flex items-center justify-between text-[11px] font-mono text-white/30">
+        <footer className="mt-12 pt-6 border-t border-white/[0.05] flex flex-wrap gap-3 items-center justify-between text-[11px] font-mono text-white/70">
           <span>MIT · Fork freely · Built by Arcanea</span>
           <span>Mock data — wire your own API</span>
         </footer>
-      </div>
+      </main>
     </div>
   );
 }

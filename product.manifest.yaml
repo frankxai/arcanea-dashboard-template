@@ -1,0 +1,8 @@
+schema_version: "1.0.0"
+product_id: product_arcanea_dashboard_template
+name: Arcanea Dashboard Template
+repository: frankxai/arcanea-dashboard-template
+status: release_candidate
+license: MIT
+publication: approval_required
+commercial: {price_state: unchanged, listing_state: not_submitted}

@@ -7,10 +7,10 @@ export function ActivityFeed() {
   return (
     <LiquidGlass className="p-6">
       <div className="flex items-center justify-between mb-4">
-        <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/50">
+        <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/70">
           Recent activity
         </p>
-        <span className="text-[10px] font-mono text-white/30">
+        <span className="text-[10px] font-mono text-white/70">
           {RECENT_ACTIVITY.length} events
         </span>
       </div>
@@ -28,7 +28,7 @@ export function ActivityFeed() {
                 <span className="text-white">{event.who}</span>{" "}
                 <span className="text-white/60">{event.what}</span>
               </p>
-              <p className="text-[10px] font-mono text-white/30 mt-0.5">
+              <p className="text-[10px] font-mono text-white/70 mt-0.5">
                 {event.when} · {event.gate}
               </p>
             </div>

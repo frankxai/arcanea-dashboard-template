@@ -8,7 +8,7 @@ export function TopProducts() {
 
   return (
     <LiquidGlass className="p-6">
-      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/50 mb-4">
+      <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-white/70 mb-4">
         Top products · 30d
       </p>
 
@@ -17,12 +17,12 @@ export function TopProducts() {
           <div key={product.name} className="space-y-1.5">
             <div className="flex items-center justify-between text-sm">
               <span className="flex items-center gap-2">
-                <span className="font-mono text-[10px] text-white/30 w-4">
+                <span className="font-mono text-[10px] text-white/70 w-4">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="text-white/85">{product.name}</span>
               </span>
-              <span className="font-mono text-white/50 text-xs">
+              <span className="font-mono text-white/70 text-xs">
                 ${product.revenue.toLocaleString()}
               </span>
             </div>

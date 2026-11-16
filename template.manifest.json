@@ -1,0 +1,12 @@
+{
+  "id": "arcanea-dashboard-template",
+  "name": "Arcanea Dashboard Template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "sourceRepository": "https://github.com/frankxai/arcanea-dashboard-template",
+  "maturity": "release-candidate",
+  "verification": {
+    "production": "not_verified",
+    "marketplace": "not_submitted"
+  }
+}
