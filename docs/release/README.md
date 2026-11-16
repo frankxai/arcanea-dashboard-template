@@ -37,3 +37,7 @@ Official requirements checked 2026-11-16: [Vercel](https://vercel.com/templates/
 - Current-commit browser/visual approval
 - Font and icon notices review
 - Owner publication approval
+
+## Executed regression reference
+
+`release/visual-baseline.json` pins decoded RGBA pixel hashes, dimensions, viewports and source revision from the inspected browser artifact. The Playwright release checks now compare against that reference on every run and attach current images on mismatch. It detects any pixel change without storing marketing masters in Git. These are technical regression baselines, separate from founder publication approval. Optional `toHaveScreenshot` image goldens remain available for a tolerance-based workflow.
